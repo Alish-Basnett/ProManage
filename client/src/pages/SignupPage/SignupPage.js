@@ -5,7 +5,6 @@ import { postData } from "../../services/api"; // Import postData function
 
 const SignupPage = ({ onClose, openLogin }) => {
   const [email, setEmail] = useState("");
-  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
@@ -22,11 +21,13 @@ const SignupPage = ({ onClose, openLogin }) => {
     }
 
     try {
-      const response = await postData("http://localhost:3000/signup", {
-        email,
-        username,
-        password,
-      });
+      const response = await postData(
+        "http://localhost:3001/api/users/register",
+        {
+          email,
+          password,
+        }
+      );
       console.log("Signup response:", response);
       // Assuming successful signup, you can close the popup or redirect
       onClose();
@@ -56,16 +57,7 @@ const SignupPage = ({ onClose, openLogin }) => {
             required
           />
         </div>
-        <div className="form-group">
-          <input
-            type="text"
-            id="username"
-            value={username}
-            placeholder="Username"
-            onChange={(e) => setUsername(e.target.value)}
-            required
-          />
-        </div>
+
         <div className="form-group">
           <input
             type="password"

@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import axios from "axios"; // Import Axios for HTTP requests
+import { useNavigate } from "react-router-dom";
 import "./LoginPage.css";
 
 const LoginPage = ({ onClose, openSignup }) => {
-  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [passwordVisible, setPasswordVisible] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
+  const navigate = useNavigate();
 
   useEffect(() => {
     document.title = "Pro Manage - Login"; // Set your desired title here
@@ -16,16 +18,20 @@ const LoginPage = ({ onClose, openSignup }) => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:3000/auth/login", {
-        username,
-        password,
-      });
+      const response = await axios.post(
+        "http://localhost:3001/api/users/login",
+        {
+          email,
+          password,
+        }
+      );
 
       // Check if response is defined and has data
       if (response && response.data) {
         console.log("Login response:", response.data);
         // Assuming successful login, you can close the popup or redirect
         onClose();
+        navigate("/dashboard");
       } else {
         console.error("Empty response received");
         setErrorMessage("Empty response received"); // Example: Set an error message
@@ -50,9 +56,9 @@ const LoginPage = ({ onClose, openSignup }) => {
         <div className="form-group">
           <input
             type="text"
-            value={username}
-            placeholder="Username or Email"
-            onChange={(e) => setUsername(e.target.value)}
+            value={email}
+            placeholder="Email"
+            onChange={(e) => setEmail(e.target.value)}
             required
           />
         </div>
