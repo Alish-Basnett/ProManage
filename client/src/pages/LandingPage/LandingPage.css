@@ -8,8 +8,8 @@
   padding: 20px;
   box-sizing: border-box;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  border: 10px solid;
-  border-image: linear-gradient(to bottom right, #00c6ff, #0072ff, #00c6ff) 1;
+  /* border: 10px solid; */
+  /* border-image: linear-gradient(to bottom right, #00c6ff, #0072ff, #00c6ff) 1; */
 }
 
 .header {

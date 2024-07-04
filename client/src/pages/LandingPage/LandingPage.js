@@ -9,6 +9,7 @@ import SignupPage from "../SignupPage/SignupPage";
 import John from "../../assets/images/JohnSnow.png";
 import Dany from "../../assets/images/Dany.png";
 import Arya from "../../assets/images/Arya.png";
+import ParticlesComponent from "../../components/particles/particle";
 
 const testimonials = [
   {
@@ -125,6 +126,8 @@ const LandingPage = ({ logo }) => {
         </div>
       </div>
       <div className="content">
+        <ParticlesComponent id="particles" />
+
         <h1>Welcome to Pro Manage</h1>
         <p>Manage your tasks efficiently and effectively</p>
         <div className="feature-icons">
