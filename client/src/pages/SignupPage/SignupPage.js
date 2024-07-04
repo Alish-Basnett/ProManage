@@ -32,7 +32,7 @@ const SignupPage = ({ onClose, openLogin }) => {
       // Assuming successful signup, you can close the popup or redirect
       onClose();
     } catch (error) {
-      console.error("Signup error:", error.response?.data);
+      console.error("Signup error:", error);
       setErrorMessage(error.response?.data || "Error signing up");
     }
   };
