@@ -6,18 +6,16 @@ import LoginPage from "./pages/LoginPage/LoginPage";
 import SignupPage from "./pages/SignupPage/SignupPage";
 import DashboardPage from "./pages/DashboardPage/DashboardPage";
 import "./App.css";
-import ParticlesComponent from "./components/particles/particle";
 
 function App() {
   return (
     <Router>
       <div className="App">
-        <ParticlesComponent id="particles" />
         <Routes>
           <Route path="/" element={<LandingPage logo={logo} />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/signup" element={<SignupPage />} />
-          <Route path="/dashboard" element={<DashboardPage />} />
+          <Route path="/dashboard" element={<DashboardPage logo={logo} />} />
         </Routes>
       </div>
     </Router>

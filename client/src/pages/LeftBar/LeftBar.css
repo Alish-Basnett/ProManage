@@ -1,0 +1,49 @@
+/* Adjusting Drawer and Paper Width */
+
+.drawer {
+    width: 50%;
+}
+
+.drawer .MuiDrawer-paper {
+    width: 50%;
+}
+
+
+/* Custom Drawer Width */
+
+.custom-drawer {
+    width: 350px;
+}
+
+
+/* Styling List Container */
+
+.leftbar-list {
+    width: 100%;
+    /* Adjust width as needed */
+}
+
+
+/* Styling List Items */
+
+.leftbar-list-items {
+    display: flex;
+    align-items: center;
+    padding: 12px 24px;
+    /* Padding for each item */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.leftbar-list-items:hover {
+    background-color: #f0f0f0;
+    /* Hover background color */
+}
+
+
+/* Styling List Item Text */
+
+.leftbar-list-items-text {
+    margin-left: 12px;
+    /* Adjust spacing between icon and text */
+}

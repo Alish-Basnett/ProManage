@@ -1,0 +1,28 @@
+.bottom-bar {
+    top: 56px;
+    /* Adjust this if you have a different height for the top bar */
+    background-color: #f8f9fa;
+    box-shadow: none;
+}
+
+.left-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.right-section {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.project-name {
+    font-weight: bold;
+}
+
+.MuiDivider-vertical {
+    height: 30px;
+    align-self: center;
+}

@@ -153,7 +153,7 @@ const LandingPage = ({ logo }) => {
             View Pricing
           </Link>
         </div>
-        <PartnerSection />
+        {/* <PartnerSection /> */}
         <div className="testimonials-container">
           <div className="testimonials-heading-container">
             <span className="testimonial-colon">"</span>
