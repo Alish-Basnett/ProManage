@@ -64,18 +64,18 @@ const LandingPage = ({ logo }) => {
     return () => observer.disconnect();
   }, []);
 
-  useEffect(() => {
-    if (isVisible) {
-      const interval = setInterval(() => {
-        setUserCount((prevCount) => {
-          const newCount = prevCount + 4;
-          return newCount <= 2300 ? newCount : 2300;
-        });
-      }, 2);
+  // useEffect(() => {
+  //   if (isVisible) {
+  //     const interval = setInterval(() => {
+  //       setUserCount((prevCount) => {
+  //         const newCount = prevCount + 4;
+  //         return newCount <= 2300 ? newCount : 2300;
+  //       });
+  //     }, 2);
 
-      return () => clearInterval(interval);
-    }
-  }, [isVisible]);
+  //     return () => clearInterval(interval);
+  //   }
+  // }, [isVisible]);
 
   const nextTestimonial = () => {
     setCurrentTestimonial((prev) =>
@@ -122,6 +122,9 @@ const LandingPage = ({ logo }) => {
             <button className="btn signup-btn" onClick={openSignupPopup}>
               Sign Up
             </button>
+            <button className="btn">
+              <Link to={"/dashboard"}>Guest Login</Link>
+            </button>
           </div>
         </div>
       </div>
@@ -142,7 +145,8 @@ const LandingPage = ({ logo }) => {
         </div>
         <div ref={userCountRef} className="user-count-section">
           <h2>Join over</h2>
-          <div className="user-count">{userCount + " +"}</div>
+          {/* <div className="user-count">{userCount + " +"}</div> */}
+          <div className="user-count">{"2300+"}</div>
           <h2>users managing their tasks with us!</h2>
         </div>
         <div className="call-to-action">
