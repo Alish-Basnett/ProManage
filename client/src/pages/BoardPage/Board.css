@@ -1,0 +1,7 @@
+.board-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #f4f5f7;
+    height: 100%;
+}
