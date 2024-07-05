@@ -1,7 +1,27 @@
+/* Board.css */
+
 .board-container {
     display: flex;
     justify-content: space-around;
     padding: 20px;
     background-color: #f4f5f7;
     height: 100%;
+}
+
+.columns {
+    display: flex;
+    /* Ensures columns are in a row */
+    gap: 20px;
+    /* Adds space between columns */
+}
+
+.board {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    /* Adjust as per your layout needs */
+    height: 100vh;
+    /* Example height; adjust based on your design */
+    padding: 20px;
+    /* Example padding; adjust based on your design */
 }
