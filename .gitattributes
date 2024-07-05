@@ -1,2 +1,0 @@
-*.js.map filter=lfs diff=lfs merge=lfs -text
-client/build/static/js/main.cd1333a2.js.map filter=lfs diff=lfs merge=lfs -text
