@@ -19,7 +19,7 @@ const LoginPage = ({ onClose, openSignup }) => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:3001/api/users/login",
+        "https://promanageserver-t5rl.onrender.com/api/users/login",
         {
           email,
           password,

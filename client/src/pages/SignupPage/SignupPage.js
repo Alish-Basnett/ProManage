@@ -22,7 +22,7 @@ const SignupPage = ({ onClose, openLogin }) => {
 
     try {
       const response = await postData(
-        "http://localhost:3001/api/users/register",
+        "https://promanageserver-t5rl.onrender.com/api/users/register",
         {
           email,
           password,
